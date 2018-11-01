@@ -29,7 +29,7 @@ report() {
 		echo "Network ${NET2NAME[$1]}/$1 has an IP address capacity of ${NET2CAP[$1]} and uses $USE addresses"
 
 		if [ $(( $USE + $NNODES )) -ge ${NET2CAP[$1]} ] ; then
-			echo "	ERROR: network will be over capacity if upgrading Docker engine version 18.06"
+			echo "	ERROR: network will be over capacity if upgrading Docker Enterprise engine version 18.09"
 			echo "	       or later."
 		elif [ $(( ${NET2NCIP[$1]} * 2 )) -ge $SAFECAP ] ; then
 			HDRM=$(( ${NET2CAP[$1]} - ${NET2NCIP[$1]} - ${NET2NVIP[$1]} ))
